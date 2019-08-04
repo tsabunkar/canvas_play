@@ -19,3 +19,14 @@
 - bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) : Draws a cubic Bézier curve from the current pen position to the end point specified by x and y, using the control points specified by (cp1x, cp1y) and (cp2x, cp2y).
 
 ---
+
+# Path2D
+
+- Path2D() constructor returns a newly instantiated Path2D object
+- optional argument can be path or a string consisting of SVG path data.
+
+new Path2D(); // empty path object
+new Path2D(path); // copy from another Path2D object
+new Path2D(d); // path from SVG path data
+
+- All path methods like moveTo, rect, arc or quadraticCurveTo, etc., which we got to know above, are available on Path2D objects.

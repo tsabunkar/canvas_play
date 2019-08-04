@@ -69,3 +69,6 @@ y-axis
 - by default canvas set 300px width and 150px height
 
 ---
+
+- rect(x, y, width, height) : Draws a rectangle whose top-left corner is specified by (x, y) with the specified width and height.
+- Before this method is executed, the moveTo() method is automatically called with the parameters (x,y). In other words, the current pen position is automatically reset to the default coordinates.
