@@ -63,3 +63,9 @@ y-axis
 
 - lineTo(x, y) : For drawing straight lines, use the lineTo() method.
 - Draws a line from the current drawing position to the position specified by x and y.
+
+---
+
+- by default canvas set 300px width and 150px height
+
+---
