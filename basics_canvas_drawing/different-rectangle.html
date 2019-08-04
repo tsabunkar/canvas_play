@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body onload="draw();">
+    <div style="background: yellow">
+      <canvas id="canvas"></canvas>
+      <canvas id="canvas2"></canvas>
+    </div>
+    <script>
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        var canvas2 = document.getElementById("canvas2");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+
+          // fillRect() function draws a large black square 100 pixels on each side. The
+          ctx.fillRect(25, 25, 100, 100);
+          // clearRect() function then erases a 60x60 pixel square from the center
+          ctx.clearRect(45, 45, 60, 60);
+
+          var ctx2 = canvas2.getContext("2d");
+          //   strokeRect() is called to create a rectangular outline 50x50 pixels
+          ctx2.strokeRect(50, 50, 50, 50);
+        }
+      }
+    </script>
+  </body>
+</html>

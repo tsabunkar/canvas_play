@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body onload="draw();">
+    <div style="border: 1px solid red">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script>
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+          // fillRect() function draws a large black square 100 pixels on each side. The
+          ctx.fillRect(50, 50, 100, 100);
+
+          ctx.beginPath();
+          ctx.moveTo(50, 50);
+          ctx.lineTo(100, 25);
+          ctx.lineTo(150, 50);
+          ctx.closePath();
+          ctx.stroke();
+        }
+      }
+    </script>
+  </body>
+</html>
