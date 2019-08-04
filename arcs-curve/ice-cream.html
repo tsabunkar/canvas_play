@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <canvas style="border: 3px dotted slateblue" id="myCanvas"></canvas>
+    </div>
+
+    <script>
+      //--------- Upper semi-circle -----------
+
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "navajowhite";
+      ctx.beginPath();
+      // x = 95, y = 50, radius = 40, startAngle = 0 Rad, endAngle = 2 * Math.PI / 2 Rad,
+      // true = anticlock-wise
+      ctx.arc(50, 50, 30, 0, (2 * Math.PI) / 2, true);
+      ctx.fill();
+
+      //--------- Lower Cone -----------
+      const ctx2 = canvas.getContext("2d");
+      ctx.fillStyle = "brown";
+      ctx2.beginPath();
+      ctx2.moveTo(80, 50);
+      ctx2.lineTo(50, 100);
+      ctx2.lineTo(20, 50);
+      ctx2.fill();
+    </script>
+  </body>
+</html>
